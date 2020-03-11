@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "nodemon",
+    "dev": "nodemon index.js --ignore public/",
     "build": "next build",
-    "start": "next start"
+    "start": "SET NODE_ENV=production && node index.js"
   },
   "dependencies": {
     "@zeit/next-css": "^1.0.1",
@@ -15,6 +15,7 @@
     "express": "^4.17.1",
     "next": "9.3.0",
     "next-offline": "^5.0.0-beta.11",
+    "next-pwa": "^2.2.1",
     "prettier": "^1.19.1",
     "react": "16.13.0",
     "react-dom": "16.13.0",
@@ -22,7 +23,10 @@
     "redux": "^4.0.4",
     "redux-devtools-extension": "^2.13.8",
     "redux-persist": "^6.0.0",
-    "redux-thunk": "^2.3.0"
+    "redux-thunk": "^2.3.0",
+    "socket.io": "^2.3.0",
+    "socket.io-client": "^2.3.0",
+    "socketio-file-upload": "^0.7.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.8.4",
